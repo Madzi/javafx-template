@@ -1,8 +1,8 @@
 package madzi.starter;
 
 import javafx.application.Application;
-import madzi.starter.app.MyApplication;
 import madzi.starter.app.SystemFactory;
+import madzi.starter.app.TemplateApplication;
 
 /**
  * Entrypoint for application
@@ -14,6 +14,6 @@ public class Starter {
         System.setProperty("app.name", sysFactory.appName());
         System.setProperty("config.file", sysFactory.appConfig().toString());
         System.setProperty("org.jboss.logging.provider", "slf4j");
-        Application.launch(MyApplication.class, args);
+        Application.launch(TemplateApplication.class, args);
     }
 }
