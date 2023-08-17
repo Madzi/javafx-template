@@ -1,15 +1,15 @@
 package madzi.starter.cdi.view;
 
+import jakarta.inject.Qualifier;
 import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
-import java.lang.annotation.ElementType;
 
+@Qualifier
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER, ElementType.TYPE })
-public @interface FxmlView {
-
-    String value();
+@Target(ElementType.PARAMETER)
+public @interface MainFxmlView {
 }

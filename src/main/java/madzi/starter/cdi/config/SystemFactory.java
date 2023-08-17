@@ -1,4 +1,4 @@
-package madzi.starter.app;
+package madzi.starter.cdi.config;
 
 import java.io.IOException;
 import java.nio.file.Files;

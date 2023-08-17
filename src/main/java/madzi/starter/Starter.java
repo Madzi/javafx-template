@@ -1,8 +1,8 @@
 package madzi.starter;
 
 import javafx.application.Application;
-import madzi.starter.app.SystemFactory;
 import madzi.starter.app.TemplateApplication;
+import madzi.starter.cdi.config.SystemFactory;
 
 /**
  * Entrypoint for application

@@ -6,7 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
 
 @ApplicationScoped
-public class AppConfigFactory {
+public class ConfigurationFactory {
 
     @Produces
     public Config config() {
