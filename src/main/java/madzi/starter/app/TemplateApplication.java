@@ -6,8 +6,9 @@ import jakarta.enterprise.util.AnnotationLiteral;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import madzi.starter.cdi.view.StartupScene;
+import madzi.starter.cdi.view.event.VoidViewEvent;
 
-public class MyApplication extends Application {
+public class TemplateApplication extends Application {
 
     private SeContainer container;
 
@@ -23,6 +24,7 @@ public class MyApplication extends Application {
 
     @Override
     public void start(final Stage stage) throws Exception {
-        container.getBeanContainer().getEvent().select(new AnnotationLiteral<StartupScene>() {}).fire(stage);
+        container.getBeanContainer().getEvent().select(new AnnotationLiteral<StartupScene>() {
+        }).fire(new VoidViewEvent(stage));
     }
 }
