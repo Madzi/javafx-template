@@ -23,6 +23,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <exec.mainClass>madzi.starter.Starter</exec.mainClass>
         <!-- Dependencies -->
+        <version.lib.hocon>1.4.2</version.lib.hocon>
         <version.lib.slf4j>2.0.7</version.lib.slf4j>
         <version.lib.logback>1.4.11</version.lib.logback>
         <version.lib.h2>2.1.214</version.lib.h2>
@@ -77,6 +78,11 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>com.typesafe</groupId>
+                <artifactId>config</artifactId>
+                <version>${version.lib.hocon}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>${version.lib.slf4j}</version>
@@ -120,6 +126,10 @@
     </dependencyManagement>
 
     <dependencies>
+        <dependency>
+            <groupId>com.typesafe</groupId>
+            <artifactId>config</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>

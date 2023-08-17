@@ -1,9 +1,12 @@
 package madzi.starter.cdi.lang;
 
-@FunctionalInterface
+import java.util.ResourceBundle;
+
 public interface MessageService {
 
     String message(Key key);
+
+    ResourceBundle resources();
 
     @FunctionalInterface
     interface Key {
